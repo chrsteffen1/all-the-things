@@ -65,7 +65,7 @@ const App = () => {
       attributes: ["efficient", "reusability", "not a taco", "beautiful"],
     },
   ]
-
+    
   const chrisThings = [
     {
       name: "dogs", 
@@ -77,7 +77,7 @@ const App = () => {
     {
       name: "gatorade flavors",
       image: "gatorade.png",  
-      attributes: ["yellow", "red", "orange", "blue"],
+      attributes: ["yellow", "red", "orange", "blue", "green"],
     },
   ]
 
@@ -112,6 +112,10 @@ const App = () => {
       <Route
         path="/the-silly-things"
         element={<SillyThings things={huntersThings} />}
+      />
+      <Route
+        path="/the-james-things"
+        element={<JamesThings things={jamesThings} />}
       />
       <Route
         path="/the-chris-things"

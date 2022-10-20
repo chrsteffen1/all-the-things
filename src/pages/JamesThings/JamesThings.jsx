@@ -13,5 +13,4 @@ const JamesThings = (props) => {
     </>
   )
 }
-
 export default JamesThings
