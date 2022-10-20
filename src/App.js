@@ -4,6 +4,7 @@ import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SIllyThings'
 import Landing from './pages/Landing/Landing'
 import ChrisThings from './pages/ChrisThings/ChrisThings'
+import JamesThings from './pages/JamesThings/JamesThings'
 
 const App = () => {
   const bensThings = [
@@ -68,6 +69,14 @@ const App = () => {
       name: "dogs",
       image: "https://imgs.xkcd.com/comics/health_drink_2x.png",  
       attributes: ["friendly", "fun", "not a taco", "beautiful"],
+    }
+  ]
+
+  const jamesThings = [
+    {
+      name: "gatorade flavors",
+      image: "gatorade.png",  
+      attributes: ["yellow", "red", "orange", "blue"],
     },
   ]
 
@@ -90,6 +99,10 @@ const App = () => {
       <Route
         path="/the-chris-things"
         element={<ChrisThings things={chrisThings} />}
+        />
+      <Route
+        path="/the-james-things"
+        element={<JamesThings things={jamesThings} />}
       />
     </Routes>
   )
