@@ -3,8 +3,9 @@ import ManliestThings from './pages/ManliestThings/ManliestThings'
 import StyledThings from './pages/StyledThings/StyledThings'
 import SillyThings from './pages/SillyThings/SIllyThings'
 import Landing from './pages/Landing/Landing'
-import JamesThings from './pages/JamesThings/JamesThings'
 import ChrisThings from './pages/ChrisThings/ChrisThings'
+import JamesThings from './pages/JamesThings/JamesThings'
+import RandomThings from './pages/RandomThings/RandomThing'
 
 const App = () => {
   const bensThings = [
@@ -63,20 +64,27 @@ const App = () => {
       attributes: ["efficient", "reusability", "not a taco", "beautiful"],
     },
   ]
+    
+  const chrisThings = [
+    {
+      name: "dogs", 
+      attributes: ["friendly", "fun", "not a taco", "beautiful"],
+    }
+  ]
 
   const jamesThings = [
     {
       name: "gatorade flavors",
       image: "gatorade.png",  
-      attributes: ["yellow", "red", "orange", "blue"],
-    }
+      attributes: ["yellow", "red", "orange", "blue", "green"],
+    },
   ]
-    
-  const chrisThings = [
+
+  const randomThings = [
     {
-      name: "dogs",
-      image: "https://imgs.xkcd.com/comics/health_drink_2x.png",  
-      attributes: ["friendly", "fun", "not a taco", "beautiful"],
+      name: "random things",
+      image: "",  
+      attributes: ["bus", "pencil", "siren", "lake"],
     },
   ]
 
@@ -103,7 +111,15 @@ const App = () => {
       <Route
         path="/the-chris-things"
         element={<ChrisThings things={chrisThings} />}
-      />  
+        />
+      <Route
+        path="/the-james-things"
+        element={<JamesThings things={jamesThings} />}
+      />
+      <Route
+        path="/the-random-things"
+        element={<RandomThings things={randomThings} />}
+      />
     </Routes>
   )
 }
