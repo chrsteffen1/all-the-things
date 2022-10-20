@@ -5,6 +5,7 @@ import SillyThings from './pages/SillyThings/SIllyThings'
 import Landing from './pages/Landing/Landing'
 import ChrisThings from './pages/ChrisThings/ChrisThings'
 import JamesThings from './pages/JamesThings/JamesThings'
+import JesseThings from './pages/JesseThings/JesseThings'
 import RandomThings from './pages/RandomThings/RandomThing'
 
 const App = () => {
@@ -80,6 +81,14 @@ const App = () => {
     },
   ]
 
+  const jesseThings = [
+    {
+      name: 'whatup',
+      image: "https://imgs.xkcd.com/comics/health_drink_2x.png",  
+      attributes: ['we', 'are', 'attribute', 'items'],
+    }
+  ]
+
   const randomThings = [
     {
       name: "random things",
@@ -112,6 +121,10 @@ const App = () => {
         path="/the-james-things"
         element={<JamesThings things={jamesThings} />}
       />
+      <Route
+      path="/the-jesse-things"
+      element={<JesseThings things={jesseThings} />}
+    />
       <Route
         path="/the-random-things"
         element={<RandomThings things={randomThings} />}
